@@ -35,7 +35,7 @@ app.delete('/api/notes/:id', (req, res) => {
     res.end();
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(chalk.red(`Server listening on PORT: ${chalk.yellow(PORT)}`));
 });
 
